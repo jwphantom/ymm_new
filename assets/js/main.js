@@ -483,10 +483,11 @@
       $(document).ready(function () {
         var swiper = new Swiper(".mySwiper-service-1", {
           slidesPerView: 3,
-          spaceBetween: 30,
+          spaceBetween: 20,
           loop: true,
-          centeredSlides: true,
+          centeredSlides: false, // Changé à false
           speed: 1000,
+          loopAdditionalSlides: 1, // Ajouté pour le loop
           pagination: {
             el: ".swiper-pagination",
             clickable: true,
@@ -494,9 +495,11 @@
           breakpoints: {
             1500: {
               slidesPerView: 3,
+              centeredSlides: false,
             },
             1300: {
               slidesPerView: 3,
+              centeredSlides: false,
             },
             991: {
               slidesPerView: 2,
@@ -508,9 +511,11 @@
             },
             575: {
               slidesPerView: 1,
+              centeredSlides: false,
             },
             0: {
               slidesPerView: 1,
+              centeredSlides: false,
             }
           },
         });
